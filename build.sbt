@@ -6,10 +6,10 @@ version := "1.0"
 
 scalaVersion := "2.11.7"
 
-testOptions in Test += Tests.Argument("threadsNb", "1")
+testOptions in Test += Tests.Argument("threadsNb", "2")
 
-concurrentRestrictions in Test := Seq(
-  Tags.limit(Tags.Test, 1)
+concurrentRestrictions in Global := Seq(
+  Tags.limit(Tags.Test, 2)
 )
 
 
